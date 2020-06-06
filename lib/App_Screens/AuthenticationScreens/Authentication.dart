@@ -78,6 +78,10 @@ class _F_AuthenticationScreen extends State<F_AuthenticationScreen> {
                backgroundColor: Colors.blueAccent,
                textSize: 20,
                textColor: Colors.white,
+               onPressed: ()
+               {
+                 main();
+               },
              ),
              SizedBox(height: 10,),
              ToDoButton(
