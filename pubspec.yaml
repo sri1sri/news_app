@@ -40,8 +40,11 @@ dependencies:
   translator: 0.1.4
   delayed_display: 1.0.3
   flutter_zoom_drawer: 1.0.3
-  sliding_panel: 1.2.3
+  dropdown_search: 0.3.3
   yaml: 2.2.1
+  gender_selection: ^1.0.0
+  modal_bottom_sheet: 0.1.6+1
+  buttons_tabbar: 0.1.1+1
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 
+
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
@@ -7,42 +8,23 @@ import 'app_functions.dart';
 
 String mainFontFamily = 'BalooBhaina2';
 
-
-var backgroundTextStyleDark = TextStyle(
-    color: Colors.black,
-    fontFamily: mainFontFamily,
-    fontWeight: FontWeight.w900,
-    fontSize: getDynamicTextSize(50),decoration: TextDecoration.none);
-
-var backgroundTextStyleMedium = TextStyle(
-    color: Colors.black12,
-    fontFamily: mainFontFamily,
-    fontWeight: FontWeight.w900,
-    fontSize: getDynamicTextSize(50),decoration: TextDecoration.none);
-
-var backgroundTextStyleLight = TextStyle(
-    color: Colors.white,
-    fontFamily: mainFontFamily,
-    fontWeight: FontWeight.w900,
-    fontSize: getDynamicTextSize(50),decoration: TextDecoration.none);
-
 var foregroundTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(26),decoration: TextDecoration.none);
+    fontSize: 26,decoration: TextDecoration.none);
 
 var foregroundTextStyleMedium = TextStyle(
     color: Colors.black12,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(26),decoration: TextDecoration.none);
+    fontSize: 26,decoration: TextDecoration.none);
 
 var foregroundTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(26),decoration: TextDecoration.none);
+    fontSize: 26,decoration: TextDecoration.none);
 
 var mediumTextStyleDark = TextStyle(
     color: Colors.black,
@@ -55,50 +37,76 @@ var mediumTextStyleMedium = TextStyle(
     color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(20),decoration: TextDecoration.none);
+    fontSize: 20,decoration: TextDecoration.none);
 
 var mediumTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
-    fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(20),decoration: TextDecoration.none);
+    fontWeight: FontWeight.w500,
+    fontSize: 20,decoration: TextDecoration.none);
+
+var mediumTextStyleDarkThin = TextStyle(
+    color: Colors.black,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 20,decoration: TextDecoration.none,
+    height: 1.5);
+
+var mediumTextStyleMediumThin = TextStyle(
+    color: Colors.black54,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 20,decoration: TextDecoration.none);
+
+var mediumTextStyleLightThin = TextStyle(
+    color: Colors.white,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 20,decoration: TextDecoration.none);
+
+var mediumTextStyleBlue = TextStyle(
+    color: Colors.blue,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: 20,decoration: TextDecoration.none);
 
 var smallTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(16),decoration: TextDecoration.none);
+    fontSize: 16,decoration: TextDecoration.none);
 
 var smallTextStyleMedium = TextStyle(
     color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(16),decoration: TextDecoration.none);
+    fontSize: 16,decoration: TextDecoration.none);
 
 var smallTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
     height: 1.5,
-    fontSize: getDynamicTextSize(16),decoration: TextDecoration.none);
+    fontSize: 16,decoration: TextDecoration.none);
+
+var verySmallTextStyleDark = TextStyle(
+    color: Colors.black,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w600,
+    fontSize: 13,decoration: TextDecoration.none);
+
+var verySmallTextStyleMedium = TextStyle(
+    color: Colors.black54,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w600,
+    fontSize: 13,decoration: TextDecoration.none);
 
 var verySmallTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: getDynamicTextSize(13),decoration: TextDecoration.none);
-
-var logoStyle1 = TextStyle(
-    color: Colors.white,
-    fontFamily: 'FingerPaint',
-    fontWeight: FontWeight.w700,
-    fontSize: getDynamicTextSize(40),decoration: TextDecoration.none);
-var logoStyle2 = TextStyle(
-    color: Colors.white,
-    fontFamily: 'FingerPaint',
-    fontWeight: FontWeight.w700,
-    fontSize: getDynamicTextSize(22),decoration: TextDecoration.none);
-
+    height: 1.5,
+    fontSize: 13,decoration: TextDecoration.none);
 
 
 

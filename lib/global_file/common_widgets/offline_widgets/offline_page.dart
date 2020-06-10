@@ -30,12 +30,12 @@ class CustomOfflinePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: getDynamicHeight(100.0),),
+            SizedBox(height: getDynamicHeight(100.0,context),),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: GradientText(
                 'Tell The Truth',
-                style: backgroundTextStyleLight,
+                style: foregroundTextStyleDark,
                 gradient: LinearGradient(
                   colors: [
                     Color(0XffFD8B1F),
@@ -48,8 +48,8 @@ class CustomOfflinePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: getDynamicWidth(350.0),
-              height: getDynamicHeight(450.0),
+              width: getDynamicWidth(350.0,context),
+              height: getDynamicHeight(450.0,context),
               child: FlareActor("images/no internet.flr", alignment:Alignment.center, fit:BoxFit.contain, animation:'no_netwrok'),
             ),
             //Splash(),

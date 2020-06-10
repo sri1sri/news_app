@@ -24,16 +24,16 @@ class CustomAppBarDark extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: Colors.white,
       ),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          SizedBox(height: 15,),
+          SizedBox(height: 10,),
           Container(
-            height: 80,
+            height: 85,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +58,7 @@ class CustomAppBarDark extends StatelessWidget {
                       primaryText == null ? Container(height: 0, width: 0,): Text(
                         primaryText,
                         textAlign: TextAlign.center,
-                        style: mediumTextStyleDark,
+                        style: foregroundTextStyleDark,
                       ),
                     ],
 
@@ -66,7 +66,7 @@ class CustomAppBarDark extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: 45,
+                    top: 40,
                     right: 20,
                   ),
                   child: InkWell(

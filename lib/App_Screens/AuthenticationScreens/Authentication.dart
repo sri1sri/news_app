@@ -1,41 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:newsapp/App_Screens/AuthenticationScreens/RegisterScreen.dart';
 import 'package:newsapp/global_file/common_variables/app_fonts.dart';
 import 'package:newsapp/global_file/common_variables/app_functions.dart';
 import 'package:newsapp/global_file/common_widgets/button_widget/to_do_button.dart';
 import 'package:newsapp/global_file/common_widgets/offline_widgets/offline_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sliding_panel/sliding_panel.dart';
 import 'package:translator/translator.dart';
 
 class AuthenticationScreen extends StatelessWidget {
-  AuthenticationScreen({@required this.langcode});
-  String langcode;
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: F_AuthenticationScreen(langcode : langcode),
+      child: F_AuthenticationScreen(),
     );
   }
 }
 
 class F_AuthenticationScreen extends StatefulWidget {
-  F_AuthenticationScreen({@required this.langcode});
-  String langcode;
   @override
-  _F_AuthenticationScreen createState() => _F_AuthenticationScreen(langcode: langcode);
+  _F_AuthenticationScreen createState() => _F_AuthenticationScreen();
 }
 
 class _F_AuthenticationScreen extends State<F_AuthenticationScreen> {
-  _F_AuthenticationScreen({@required this.langcode});
-  String langcode;
-  void main() async {
-    GoogleTranslator translator = GoogleTranslator();
-    String text = "SignIn with Google";
-    translator.translate(text, from: 'en', to: langcode).then((s) {
-      print(s);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +55,6 @@ class _F_AuthenticationScreen extends State<F_AuthenticationScreen> {
                textSize: 20,
                textColor: Colors.white,
                onPressed: (){
-                 _read(langcode);
                },
              ),
              SizedBox(height: 10,),
@@ -80,7 +66,6 @@ class _F_AuthenticationScreen extends State<F_AuthenticationScreen> {
                textColor: Colors.white,
                onPressed: ()
                {
-                 main();
                },
              ),
              SizedBox(height: 10,),
@@ -90,6 +75,9 @@ class _F_AuthenticationScreen extends State<F_AuthenticationScreen> {
                backgroundColor: Colors.black54,
                textSize: 20,
                textColor: Colors.white,
+               onPressed: (){
+                 GoToPage(context,RegistrationScreens(),false);
+               },
              ),
              SizedBox(height: 50),
            ],

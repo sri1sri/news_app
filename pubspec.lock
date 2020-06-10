@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  buttons_tabbar:
+    dependency: "direct main"
+    description:
+      name: buttons_tabbar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1+1"
   characters:
     dependency: transitive
     description:
@@ -106,6 +113,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  dropdown_search:
+    dependency: "direct main"
+    description:
+      name: dropdown_search
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3"
   flare_dart:
     dependency: transitive
     description:
@@ -149,6 +163,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  gender_selection:
+    dependency: "direct main"
+    description:
+      name: gender_selection
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   gradient_text:
     dependency: "direct main"
     description:
@@ -212,6 +233,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.8"
+  modal_bottom_sheet:
+    dependency: "direct main"
+    description:
+      name: modal_bottom_sheet
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6+1"
   path:
     dependency: transitive
     description:
@@ -315,13 +343,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  sliding_panel:
-    dependency: "direct main"
-    description:
-      name: sliding_panel
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.3"
   source_span:
     dependency: transitive
     description:
