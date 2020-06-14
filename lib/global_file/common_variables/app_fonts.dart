@@ -2,8 +2,6 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-
-
 import 'app_functions.dart';
 
 String mainFontFamily = 'BalooBhaina2';

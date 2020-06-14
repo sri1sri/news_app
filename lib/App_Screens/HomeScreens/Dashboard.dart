@@ -151,7 +151,7 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
                         padding: const EdgeInsets.only(bottom:20.0),
                         child: SwipeStack(
                           key: _swipeKey,
-                          children: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((int index) {
+                          children: [0, 1, 2, 3, 4, 5].map((int index) {
                             return SwiperItem(
                                 builder: (SwiperPosition position, double progress) {
                                   return Material(
@@ -165,7 +165,7 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: <Widget>[
-                                              Text("Item $newsHeading", style: TextStyle(color: Colors.black, fontSize: 20)),
+                                              Text("Item ${newsHeading[index]}", style: TextStyle(color: Colors.black, fontSize: 20)),
                                               Text("Progress $progress", style: TextStyle(color: Colors.blue, fontSize: 12)),
                                             ],
                                           )
@@ -174,7 +174,7 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
                                 }
                             );
                           }).toList(),
-                          visibleCount: 4,
+                          visibleCount: 3,
                           stackFrom: StackFrom.Bottom,
                           translationInterval: 6,
                           scaleInterval: 0.03,
