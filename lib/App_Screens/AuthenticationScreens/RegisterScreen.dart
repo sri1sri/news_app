@@ -80,8 +80,21 @@ class _F_RegistrationScreens extends State<F_RegistrationScreens> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(height: 30,),
-                      Text("Almost there..!",style: foregroundTextStyleDark,),
+                      SizedBox(height: 40,),
+                      GradientText(
+                        'Almost there..!',
+                        style: foregroundTextStyleDark,
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0Xff0072FF),
+                            Color(0Xff00C6FF),
+                          ],
+                          begin: Alignment.topLeft,
+                          end:
+                          Alignment.bottomRight,
+                        ),
+                      ),
+                      //Text("Almost there..!",style: foregroundTextStyleDark,),
                       SizedBox(height: 10,),
                       Form(
                         key: _formKey,
@@ -276,9 +289,8 @@ class _F_RegistrationScreens extends State<F_RegistrationScreens> {
                                                       style: mediumTextStyleDark,
                                                       gradient: LinearGradient(
                                                         colors: [
-                                                          Color(0XffFD8B1F),
-                                                          Color(0XffD152E0),
-                                                          Color(0Xff30D0DB),
+                                                          Color(0Xff0072FF),
+                                                          Color(0Xff00C6FF),
                                                         ],
                                                         begin: Alignment.topLeft,
                                                         end:
@@ -356,41 +368,29 @@ class _F_RegistrationScreens extends State<F_RegistrationScreens> {
                           child: Container(
                             width: 170.0,
                             height: 60,
-                            padding: EdgeInsets.all(7.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Center(
                                 child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Container(),
-                                      GradientText(
-                                        'Submit',
-                                        style: foregroundTextStyleDark,
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            Color(0XffFD8B1F),
-                                            Color(0XffD152E0),
-                                            Color(0Xff30D0DB),
-                                          ],
-                                          begin: Alignment.topLeft,
-                                          end: Alignment.bottomRight,
-                                        ),
-                                      ),
+                                      Text("Submit",style: foregroundTextStyleLight,),
                                       Icon(
                                         Icons.arrow_forward_ios,
-                                        color: Colors.blue,
+                                        color: Colors.white,
                                         size: 25,
                                       ),
                                       Container(),
                                     ])),
                             decoration: BoxDecoration(
                                 color: Colors.white,
-//                            gradient: LinearGradient(
-//                                colors: <Color>[
-//                                Color(0XffFD8B1F),
-//                            Color(0XffD152E0),
-//                            Color(0Xff30D0DB),
-//                            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                            gradient: LinearGradient(
+                                colors: <Color>[
+                                Color(0Xff0072FF),
+                            Color(0Xff00C6FF),
+                            ], begin: Alignment.centerLeft, end: Alignment.centerRight),
 
                                 borderRadius: BorderRadius.circular(30.0),
                                 boxShadow: [

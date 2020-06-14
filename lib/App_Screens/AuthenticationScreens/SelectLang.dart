@@ -64,7 +64,7 @@ class _F_SelectLang extends State<F_SelectLang> with SingleTickerProviderStateMi
                   context: context,
                   backgroundColor: Colors.transparent,
                   builder: (context, scrollController) =>
-                      ModalInsideModal(
+                      ModalInsideModalLangauge(
                           scrollController: scrollController),
                 )
             ),

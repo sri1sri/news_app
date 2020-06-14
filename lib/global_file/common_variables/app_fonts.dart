@@ -7,31 +7,40 @@ import 'package:flutter/material.dart';
 import 'app_functions.dart';
 
 String mainFontFamily = 'BalooBhaina2';
+var titleTextStyleDark = TextStyle(
+    color: Colors.black,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w700,
+    height: 1.2,
+    fontSize: 40,decoration: TextDecoration.none);
 
 var foregroundTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 26,decoration: TextDecoration.none);
 
 var foregroundTextStyleMedium = TextStyle(
-    color: Colors.black12,
+    color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 26,decoration: TextDecoration.none);
 
 var foregroundTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 26,decoration: TextDecoration.none);
 
 var mediumTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    fontSize: 20,decoration: TextDecoration.none,
-    height: 1.5);
+    fontSize: 23,decoration: TextDecoration.none,
+    height: 1.2);
 
 var mediumTextStyleMedium = TextStyle(
     color: Colors.black54,
@@ -42,6 +51,7 @@ var mediumTextStyleMedium = TextStyle(
 var mediumTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
+    height: 1.2,
     fontWeight: FontWeight.w500,
     fontSize: 20,decoration: TextDecoration.none);
 
@@ -49,63 +59,84 @@ var mediumTextStyleDarkThin = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w400,
-    fontSize: 20,decoration: TextDecoration.none,
-    height: 1.5);
+  height: 1.2,
+    fontSize: 20,decoration: TextDecoration.none,);
 
 var mediumTextStyleMediumThin = TextStyle(
     color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w400,
+    height: 1.2,
     fontSize: 20,decoration: TextDecoration.none);
 
 var mediumTextStyleLightThin = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w400,
+    height: 1.2,
     fontSize: 20,decoration: TextDecoration.none);
 
 var mediumTextStyleBlue = TextStyle(
     color: Colors.blue,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w400,
+    height: 1.2,
     fontSize: 20,decoration: TextDecoration.none);
+
+var smallTextStyleDarkThin = TextStyle(
+  color: Colors.black87,
+  fontFamily: mainFontFamily,
+  fontWeight: FontWeight.w400,
+  height: 1.2,
+  fontSize: 18,decoration: TextDecoration.none,);
 
 var smallTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 16,decoration: TextDecoration.none);
 
 var smallTextStyleMedium = TextStyle(
     color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
+    fontSize: 16,decoration: TextDecoration.none);
+
+var smallTextStyleBlue = TextStyle(
+    color: Colors.blue,
+    fontFamily: mainFontFamily,
+    fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 16,decoration: TextDecoration.none);
 
 var smallTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    height: 1.5,
+    height: 1.2,
     fontSize: 16,decoration: TextDecoration.none);
 
 var verySmallTextStyleDark = TextStyle(
     color: Colors.black,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 13,decoration: TextDecoration.none);
 
 var verySmallTextStyleMedium = TextStyle(
     color: Colors.black54,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
+    height: 1.2,
     fontSize: 13,decoration: TextDecoration.none);
 
 var verySmallTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
     fontWeight: FontWeight.w600,
-    height: 1.5,
+    height: 1.2,
     fontSize: 13,decoration: TextDecoration.none);
 
 

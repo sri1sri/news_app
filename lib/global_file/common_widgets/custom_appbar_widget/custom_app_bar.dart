@@ -51,7 +51,7 @@ class CustomAppBarDark extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, 45, 0, 0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

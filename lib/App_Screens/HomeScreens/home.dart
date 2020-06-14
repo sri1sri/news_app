@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/App_Screens/AddPostScreens/AddPostScreen.dart';
+import 'package:newsapp/App_Screens/ProfileScreens/ProfileScreen.dart';
+import 'package:newsapp/App_Screens/SearchScreens/SearchHomeScreen.dart';
 import 'package:newsapp/global_file/common_widgets/bottom_nav.dart';
 
 import 'Dashboard.dart';
@@ -27,15 +30,17 @@ class HomeState extends State<Home> {
 
       body: DefaultTabController(
           initialIndex: 0,
-          length: 3,
+          length: 5,
           child: Scaffold(
             //AppBar ,
-            backgroundColor: Colors.white,//
+            //backgroundColor: Colors.white,//
             body:
             TabBarView(physics: NeverScrollableScrollPhysics(), children: [
               Dashboard(),
+              SearchHomeScreen(),
+              AddPostScreen(),
               Dashboard(),
-              Dashboard(),
+              ProfileScreen(),
             ]),
 
             bottomNavigationBar: Padding(
