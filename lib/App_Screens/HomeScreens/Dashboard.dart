@@ -28,6 +28,25 @@ class F_Dashboard extends StatefulWidget {
 }
 
 class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin {
+
+  var newsHeading = [
+    "COVID-19 pandemic, also known as the coronavirus pandemic",
+    "COVID-19 pandemic, also known as the coronavirus pandemic",
+    "COVID-19 pandemic, also known as the coronavirus pandemic",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic",
+  ];
+  List<String> F_image = [
+    "images/c1.jpeg",
+    "images/c2.jpeg",
+    "images/c3.jpeg",
+    "images/c1.jpeg",
+    "images/c2.jpeg",
+    "images/c3.jpeg",
+
+  ];
+
   TabController _tabController;
   final GlobalKey<SwipeStackState> _swipeKey = GlobalKey<SwipeStackState>();
   void initState() {
@@ -146,7 +165,7 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: <Widget>[
-                                              Text("Item $index", style: TextStyle(color: Colors.black, fontSize: 20)),
+                                              Text("Item $newsHeading", style: TextStyle(color: Colors.black, fontSize: 20)),
                                               Text("Progress $progress", style: TextStyle(color: Colors.blue, fontSize: 12)),
                                             ],
                                           )
