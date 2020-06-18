@@ -2,6 +2,8 @@ import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:newsapp/App_Screens/SearchScreens/SearchHomeScreen.dart';
+import 'package:newsapp/App_Screens/menu_frame.dart';
 import 'package:newsapp/global_file/common_variables/app_fonts.dart';
 import 'package:newsapp/global_file/common_variables/app_functions.dart';
 import 'package:newsapp/global_file/common_widgets/button_widget/to_do_button.dart';
@@ -29,22 +31,55 @@ class F_Dashboard extends StatefulWidget {
 
 class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin {
 
+  var content = [
+    "The COVID-19 pandemic, also known as the coronavirus pandemic,disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019.",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic,disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019.",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic,disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019.",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019.",
+    "The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019. The COVID-19 pandemic, also known as the coronavirus pandemic, disease 2019.",
+  ];
+
   var newsHeading = [
     "COVID-19 pandemic, also known as the coronavirus pandemic",
     "COVID-19 pandemic, also known as the coronavirus pandemic",
     "COVID-19 pandemic, also known as the coronavirus pandemic",
     "The COVID-19 pandemic, also known as the coronavirus pandemic",
     "The COVID-19 pandemic, also known as the coronavirus pandemic",
-    "The COVID-19 pandemic, also known as the coronavirus pandemic",
+  ];
+  var profileName = [
+    "BBC News Times",
+    "The Weather Channel",
+    "The FOX News",
+    "BBC News Times",
+    "The Weather Channel",
+  ];
+  var reads = [
+    "33,323",
+    "33,323",
+    "33,323",
+    "33,323",
+    "33,323",
+  ];
+  var time = [
+    "2hrs",
+    "2hrs",
+    "2hrs",
+    "2hrs",
+    "2hrs",
+  ];
+  List<String> F_logo = [
+    "https://cdn0.iconfinder.com/data/icons/social-62/512/media__social__web__network__youtube__channel_-512.png",
+    "https://cdn2.iconfinder.com/data/icons/metro-ui-dock/128/The_Weather_Channel.png",
+    "https://cdn2.iconfinder.com/data/icons/metro-ui-dock/512/Fox_News.png",
+    "https://cdn0.iconfinder.com/data/icons/social-62/512/media__social__web__network__youtube__channel_-512.png",
+    "https://cdn2.iconfinder.com/data/icons/metro-ui-dock/128/The_Weather_Channel.png",
   ];
   List<String> F_image = [
     "images/c1.jpeg",
     "images/c2.jpeg",
     "images/c3.jpeg",
-    "images/c1.jpeg",
     "images/c2.jpeg",
-    "images/c3.jpeg",
-
+    "images/c1.jpeg",
   ];
 
   TabController _tabController;
@@ -72,7 +107,7 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
 
   Widget _buildContent(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+     // backgroundColor: Colors.white,
 //      appBar: PreferredSize(
 //        preferredSize:
 //        Size.fromHeight(55),
@@ -94,6 +129,31 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
 //          tabBarWidget: null,
 //        ),
 //      ),
+      appBar: PreferredSize(
+        preferredSize:
+        Size.fromHeight(55),
+        child: CustomAppBarDark(
+          leftActionBar: Icon(Icons.menu,color: Colors.black,size: 30,),
+          leftAction: (){
+            GoToPage(context,MenuFrame(),false);
+          },
+          rightActionBar: Row(
+            children: [
+              GestureDetector(
+                  onTap: () => showBarModalBottomSheet(
+                    expand: false,
+                    context: context,
+                    backgroundColor: Colors.transparent,
+                    builder: (context, scrollController) =>
+                        ModalInsideModalLangauge(
+                            scrollController: scrollController),
+                  ),
+                  child: Image.network("https://cdn3.iconfinder.com/data/icons/google-suits-1/32/18_google_translate_text_language_translation-512.png",height: 50,width: 50,)),
+            ],
+          ),
+          tabBarWidget: null,
+        ),
+      ),
       body: Scaffold(
         //backgroundColor: Colors.white,
         body: SafeArea(
@@ -151,24 +211,90 @@ class _F_Dashboard extends State<F_Dashboard>with SingleTickerProviderStateMixin
                         padding: const EdgeInsets.only(bottom:20.0),
                         child: SwipeStack(
                           key: _swipeKey,
-                          children: [0, 1, 2, 3, 4, 5].map((int index) {
+                          children: [0, 1, 2, 3, 4].map((int index) {
                             return SwiperItem(
                                 builder: (SwiperPosition position, double progress) {
                                   return Material(
                                       elevation: 3,
                                       borderRadius: BorderRadius.all(Radius.circular(6)),
-                                      child: Container(
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.all(Radius.circular(6)),
-                                          ),
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text("Item ${newsHeading[index]}", style: TextStyle(color: Colors.black, fontSize: 20)),
-                                              Text("Progress $progress", style: TextStyle(color: Colors.blue, fontSize: 12)),
-                                            ],
-                                          )
+                                      child: GestureDetector(
+                                        onTap: (){
+                                          GoToPage(context,DetailedNewsScreen(),false);
+                                        },
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius: BorderRadius.all(Radius.circular(6)),
+                                            ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(15.0),
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: <Widget>[
+                                                  SizedBox(height: 10,),
+                                                  Row(
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: [
+                                                      CircleAvatar(
+                                                        backgroundColor: Colors.transparent,
+                                                        radius: 15,
+                                                        backgroundImage: NetworkImage(F_logo[index]),
+                                                      ),
+                                                      SizedBox(width: 10,),
+                                                      Text(profileName[index],style: smallTextStyleDarkThin,)
+                                                    ],
+                                                  ),
+                                                  SizedBox(height: 20,),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        width: MediaQuery.of(context).size.width/1.45,
+                                                        child: Text("Item ${newsHeading[index]}", style: mediumTextStyleDark),
+                                                      ),
+                                                      IconButton(
+                                                        icon: Icon(Icons.turned_in_not,color: Colors.black,size: 30,),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  SizedBox(height: 10,),
+                                                  Row(
+                                                    children: [
+                                                      Text("${reads[index]} reads",style: smallTextStyleMedium,),
+                                                      SizedBox(width: 30,),
+                                                      Text("${time[index]} ago",style: smallTextStyleMedium,),
+
+                                                    ],
+                                                  ),
+                                                  SizedBox(height: 20,),
+                                                  Card(
+                                                    elevation: 0,
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.circular(10),
+                                                    ),
+                                                    child: Container(
+                                                        height: 250.0,
+                                                        width: MediaQuery.of(context).size.width,
+                                                        decoration: BoxDecoration(
+                                                            borderRadius: BorderRadius.circular(10.0),
+                                                            image: DecorationImage(
+                                                                image: AssetImage(F_image[index]), fit: BoxFit.fill))),),
+                                                  SizedBox(height: 20,),
+                                                  Flexible(
+                                                    child: new Container(
+                                                      height: 200,
+                                                      child: new Text(
+                                                        content[index],
+                                                        //maxLines: 4,
+                                                        maxLines: 7,
+                                                        overflow: TextOverflow.ellipsis,
+                                                        style: smallTextStyleMedium,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                        ),
                                       )
                                   );
                                 }

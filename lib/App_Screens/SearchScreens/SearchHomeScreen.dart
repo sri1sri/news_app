@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/App_Screens/HomeScreens/DetailedNewsScreen.dart';
+import 'package:newsapp/App_Screens/menu_frame.dart';
 import 'package:newsapp/global_file/common_variables/app_fonts.dart';
 import 'package:newsapp/global_file/common_variables/app_functions.dart';
 import 'package:newsapp/global_file/common_widgets/custom_appbar_widget/custom_app_bar.dart';
@@ -61,6 +62,16 @@ class _F_SearchHomeScreen extends State<F_SearchHomeScreen> {
           length: 2,
           child: Column(
             children: <Widget>[
+              Row(
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.menu,color: Colors.black,size: 30,),
+                    onPressed: (){
+                      GoToPage(context,MenuFrame(),false);
+                    },
+                  ),
+                ],
+              ),
               if (_show)
                 SearchWidget<LeaderBoard>(
                   dataList: list,

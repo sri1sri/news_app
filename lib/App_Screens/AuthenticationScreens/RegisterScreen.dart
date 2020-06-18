@@ -5,6 +5,7 @@ import 'package:gender_selection/gender_selection.dart';
 import 'package:gradient_text/gradient_text.dart';
 import 'package:intl/intl.dart';
 import 'package:newsapp/App_Screens/HomeScreens/home.dart';
+import 'package:newsapp/App_Screens/menu_frame.dart';
 import 'package:newsapp/global_file/common_variables/app_colors.dart';
 import 'package:newsapp/global_file/common_variables/app_fonts.dart';
 import 'package:newsapp/global_file/common_variables/app_functions.dart';
@@ -402,7 +403,7 @@ class _F_RegistrationScreens extends State<F_RegistrationScreens> {
                                 ]),
                           ),
                           onTap: (){
-                            GoToPage(context,Home(),false);
+                            GoToPage(context,MenuFrame(),false);
                           },
                         ),
                       ],

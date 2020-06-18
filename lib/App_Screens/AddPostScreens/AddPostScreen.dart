@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/App_Screens/AddPostScreens/AddPostDetails.dart';
 import 'package:newsapp/App_Screens/HomeScreens/DetailedNewsScreen.dart';
+import 'package:newsapp/App_Screens/menu_frame.dart';
 import 'package:newsapp/global_file/common_variables/app_fonts.dart';
 import 'package:newsapp/global_file/common_variables/app_functions.dart';
 import 'package:newsapp/global_file/common_widgets/custom_appbar_widget/custom_app_bar.dart';
@@ -51,10 +52,10 @@ class _F_AddPostScreen extends State<F_AddPostScreen> {
         preferredSize:
         Size.fromHeight(55),
         child: CustomAppBarDark(
-          leftActionBar: Icon(Icons.arrow_back_ios,color: Colors.white,size: 25,),
-//          leftAction: () {
-//            Navigator.pop(context,true);
-//          },
+          leftActionBar: Icon(Icons.menu,color: Colors.black,size: 30,),
+          leftAction: (){
+            GoToPage(context,MenuFrame(),false);
+          },
           rightActionBar: Text("Next",style: mediumTextStyleBlue,) ,
           rightAction:(){
             GoToPage(context, AddPostDetails(), false);

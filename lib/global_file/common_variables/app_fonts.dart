@@ -49,9 +49,8 @@ var mediumTextStyleMedium = TextStyle(
 var mediumTextStyleLight = TextStyle(
     color: Colors.white,
     fontFamily: mainFontFamily,
-    height: 1.2,
-    fontWeight: FontWeight.w500,
-    fontSize: 20,decoration: TextDecoration.none);
+    fontWeight: FontWeight.w600,
+    fontSize: 23,decoration: TextDecoration.none);
 
 var mediumTextStyleDarkThin = TextStyle(
     color: Colors.black,
